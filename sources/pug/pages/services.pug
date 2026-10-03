@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Services'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName + ' #1'],
+		bgImage: 'bg-elements'
+	})
+	
+	// Section-services
+	section.section.section-xl.bg-default
+		.container
+			.row.row-40
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-phone-in-out',
+						title: 'Answering Services',
+						text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-headset',
+						title: 'Call Center Solutions',
+						text: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-outbox',
+						title: 'cloud Development',
+						text: 'Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-desktop',
+						title: 'iOS/MacOS Apps',
+						text: 'Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-smartphone',
+						title: 'Android Applications',
+						text: 'Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'linearicons-pen-add',
+						title: 'UX and Design',
+						text: 'Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.'
+					})
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

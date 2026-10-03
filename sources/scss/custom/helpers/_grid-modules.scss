@@ -1,0 +1,52 @@
+/** @section Grid modules */
+
+//
+// Grid demonstration
+//
+.grid-demonstration {
+	text-align: left;
+
+	@include media-breakpoint-down(xxl) {
+
+		p {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.grid-demonstration-fullwidth {
+	line-height: 1.86;
+
+	* + p {	margin-top: 12px; }
+}
+
+.grid-demonstration-boxed {
+	line-height: 1.8;
+
+	* + p {	margin-top: 22px; }
+}
+
+//
+// Grid system bordered
+//
+.grid-system-bordered {
+
+	[class*='col'] {
+		padding-bottom: 15px;
+		border-bottom: 1px solid $gray-13;
+	}
+
+	@include media-breakpoint-up(sm) {
+		[class*='col'] {
+			padding-bottom: 30px;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		[class*='col'] {
+			padding-bottom: 45px;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-posts
+include ../components/_ui-pagination
+include ../components/_ui-quote
+
+block variables
+	- var activeCategory = 'blog'
+	- var pageName = 'Classic blog'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Classic blog
+	section.section.section-xl.bg-default.text-md-start
+		.container
+			.row.row-70
+				.col-lg-8
+					+post-classic({
+						title: 'Benefits of ASync/Await in Programming',
+						badge: {mod: 'badge-secondary', text: 'development'},
+						time: {datetime: '2023-11-30', dateText: 'Nov 30, 2023'},
+						img: 'post-1-770x430'
+					})
+					
+					+post-classic({
+						title: 'Key Considerations and Warnings of iPaaS',
+						badge: {mod: 'badge-primary', text: 'programming'},
+						time: {datetime: '2023-11-30', dateText: 'Nov 30, 2023'},
+						owl: [
+							{img: 'post-2-770x430'},
+							{img: 'post-3-770x430'},
+							{img: 'post-4-770x430'}
+						]
+					})
+					
+					+post-classic({
+						title: 'Tutorial: Usage of Hibernate Query Language (HQL)',
+						badge: {mod: 'badge-secondary', text: 'development'},
+						time: {datetime: '2023-11-30', dateText: 'Nov 30, 2023'},
+						video: 'https://player.vimeo.com/video/90696907'
+					})
+					
+					+post-classic({
+						title: 'Software Development and Product Strategy',
+						badge: {mod: 'badge-secondary', text: 'development'},
+						time: {datetime: '2023-11-30', dateText: 'Nov 30, 2023'},
+						gallery: {
+							img: 'post-5-470x430',
+							img2: 'post-6-270x204',
+							img3: 'post-7-270x204'
+						}
+					})
+					
+					.pagination-wrap
+						+pagination-bootstrap(null, 1, 4)
+				
+				.col-lg-4
+					include ../sections/_post-sidebar
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

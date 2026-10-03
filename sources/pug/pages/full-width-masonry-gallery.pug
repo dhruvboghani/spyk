@@ -1,0 +1,37 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'gallery'
+	- var pageName = 'Full-width masonry gallery '
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Grid Gallery
+	section.section.section-xl.section-fluid.bg-default.text-center
+		.container-fluid.isotope-wrap
+			.isotope-filters.isotope-filters-horizontal
+				//- Isotope Filters
+				button.isotope-filters-toggle.button.button-md.button-icon.button-icon-right.button-default-outline.button-wapasha(data-custom-toggle='#isotope-6', data-custom-toggle-hide-on-blur='true'  data-custom-toggle-disable-on-blur='true')
+					span.icon.fa.fa-caret-down
+					| Filter
+				ul#isotope-6.isotope-filters-list
+					li: a.active(href='#', data-isotope-filter='*', data-isotope-group='gallery') All
+					li: a(href='#', data-isotope-filter='Type 1', data-isotope-group='gallery') mobile Apps
+					li: a(href='#', data-isotope-filter='Type 2', data-isotope-group='gallery') Custom Software
+					li: a(href='#', data-isotope-filter='Type 3', data-isotope-group='gallery') QA & Testing
+					li: a(href='#', data-isotope-filter='Type 3', data-isotope-group='gallery') UX and Design
+			include ../sections/_section-full-width-masonry-gallery
+			
+			.button-wrap: button.button.button-md.button-default-outline.button-wapasha Load More
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

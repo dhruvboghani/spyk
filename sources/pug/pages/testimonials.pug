@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-quote
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Testimonials'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Testimonials #1
+	section.section.section-sm.section-first.bg-default
+		.container
+			h3 #1
+			.row.row-50.row-sm
+				.col-md-6
+					+quote-modern({
+						img: 'user-11-75x75',
+						author: 'catherine williams',
+						status: 'Regular client',
+						text: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+					})
+				.col-md-6
+					+quote-modern({
+						img: 'user-12-75x75',
+						author: 'Rupert Wood',
+						status: 'Regular client',
+						text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. '
+					})
+	='\n'
+	
+	// Testimonials #2
+	section.section.section-sm.bg-default
+		.container
+			h3 #2
+			.row.row-xxl.row-70.justify-content-center
+				.col-sm-10.col-md-6.col-lg-5.col-xl-4
+					+quote-creative({
+						img: 'user-13-87x87',
+						author: 'Rupert Wood',
+						text: 'Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat.'
+					})
+				
+				.col-sm-10.col-md-6.col-lg-5.col-xl-4
+					+quote-creative({
+						img: 'user-14-87x87',
+						author: 'catherine williams',
+						text: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; '
+					})
+				
+				.col-sm-10.col-md-6.col-lg-5.col-xl-4
+					+quote-creative({
+						img: 'user-15-87x87',
+						author: 'Samanta Peterson',
+						text: 'Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Curabitur non ac lectus.'
+					})
+	
+	='\n'
+	
+	// Testimonials #3
+	section.section.section-sm.bg-default
+		.container
+			h3 #3
+			.row.row-sm.row-30.justify-content-center
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4
+					+quote-nancy({
+						img: 'testimonials-1-368x503',
+						quote: 'they have very Talented Devs',
+						text: 'Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing t at tellus.',
+						imgUser: 'user-13-87x87',
+						author: 'Rupert Wood',
+						status: 'Regular client'
+					})
+				
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4
+					+quote-nancy({
+						img: 'testimonials-2-368x503',
+						quote: 'These guys are very experienced',
+						text: 'Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed dictum porta.',
+						imgUser: 'user-14-87x87',
+						author: 'Catherine Williams',
+						status: 'Regular client'
+					})
+				
+				.col-sm-9.col-md-6.col-lg-5.col-xl-4
+					+quote-nancy({
+						img: 'testimonials-3-368x503',
+						quote: 'the greatest Team of developers',
+						text: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget.',
+						imgUser: 'user-15-87x87',
+						author: 'Samanta Peterson',
+						status: 'Regular client'
+					})
+	
+	='\n'
+	
+	// Testimonials #4
+	section.section.section-sm.section-last.bg-default
+		.container
+			h3 #4
+			include ../sections/_carousel-testimonials
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

@@ -1,0 +1,58 @@
+/** @section Google Map */
+
+.google-map {
+	color: #000;
+	height: $map-height;
+	text-align: center;
+
+	img {
+		max-width: none !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		height: $map-md-height;
+	}
+
+	@include media-breakpoint-up(xl) {
+		height: $map-xl-height;
+	}
+}
+
+.section-map-small {
+	.google-map {
+		@include media-breakpoint-up(lg) {
+			height: 460px;
+		}
+	}
+}
+
+.map_locations {
+	display: none;
+}
+
+.iw-content {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 180px;
+}
+
+.gm-style-iw > div > div {
+	padding: 17px 35px;
+}
+
+
+.map_locations-title {
+	color: $gray-500;
+}
+
+.map_locations-text {
+	font-size: 14px;
+	line-height: 1.72;
+	font-weight: 400;
+	letter-spacing: .025em;
+	font-family: $font-family-base;
+}
+
+* + .map_locations-text {	margin-top: 6px; }
+
+

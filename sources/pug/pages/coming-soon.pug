@@ -1,0 +1,33 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-inline-subscribe-form
+include ../components/_countdown
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Coming Soon'
+
+block title
+	title=pageName
+
+block page
+	section.section.section-single.section-503.novi-background.bg-overlay-0
+		.section-single-inner
+			//-Page Header
+			include ../sections/_section-header-base-transparent
+			
+			//- Page Main
+			.section-single-main
+				.container: .row.justify-content-center: .col-lg-10.col-xl-8
+					h3.h3.title-modern We’re getting ready to launch in
+
+					+countdown({to: '2025-12-20'})
+
+					p.big.text-spacing-75 Stay tuned and subscribe to our newsletter
+					+inline-subscribe-form({customUnique: '2', button: 'button-primary button-ujarak'})
+
+			//-Page Footer
+			include ../sections/_section-footer-base-transparent
+		
+		.box-position(style='background-image: url(images/bg-cs.jpg);')

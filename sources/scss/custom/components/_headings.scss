@@ -1,0 +1,143 @@
+/** @section Headings */
+
+//
+// Table of Contents: 
+//
+// Title Classic
+// Title Modern
+// Title Creative
+//
+
+//
+// Title Classic
+//
+.title-classic {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	@include group(32px, 15px);
+}
+
+.title-classic-title {
+	flex-shrink: 0;
+
+	> h3 {
+		margin-top: 6px;
+	}
+}
+
+.title-classic-text {
+	font-size: 16px;
+	padding-top: 20px;
+	border-top: 1px solid $gray-3;
+}
+
+* + .title-classic-text {
+	margin-top: 0;
+}
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+	.title-classic {
+		text-align: left;
+		flex-direction: row;
+	}
+
+	.title-classic-text {
+		padding-top: 0;
+		padding-left: 28px;
+		border-top: none;
+		border-left: 1px solid $gray-3;
+	}
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+	.title-classic-text {
+		font-size: 18px;
+	}
+}
+
+//
+// Title Modern
+//
+.title-modern {
+	letter-spacing: .04em;
+	font-family: $font-family-sec;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	&.h1 {
+		font-size: 110px;
+	}
+
+	&.h2 {
+		font-size: 70px;
+	}
+
+	&.h3 {
+		font-size: 48px;
+	}
+
+	> span {
+		position: absolute;
+		left: 51%;
+		font-size: 3.75em;
+		line-height: 1;
+		letter-spacing: .05em;
+		color: rgba($gray-800, .07);
+		transform: translate3d(-50%, 0, 0);
+		will-change: transform;
+	}
+
+}
+
+h1.title-modern > span {
+	top: -65px;
+	font-size: 412px;
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		top: -85px;
+	}
+
+	// Extra large ≥992px
+	@include media-breakpoint-up(lg) {
+		top: -87px;
+		.section-503 & {
+			top: -122px;
+		}
+	}
+}
+
+h2.title-modern {
+	font-weight: 300;
+
+	> span {
+		top: -70px;
+		font-size: 5.86em;
+
+		// Medium ≥768px
+		@include media-breakpoint-up(md) {
+			top: -90px;
+		}
+
+		// Extra large ≥992px
+		@include media-breakpoint-up(lg) {
+			top: -120px;
+		}
+
+		// Extra large ≥992px
+		@include media-breakpoint-up(xl) {
+			top: -135px;
+		}
+	}
+}
+
+
+// Title Custom
+.title-opacity-9 {
+	color: rgba($gray-800, .09);
+}

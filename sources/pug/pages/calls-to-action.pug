@@ -1,0 +1,30 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Calls to action'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Section CTA
+	section.section.section-sm.section-first.section-fluid.bg-default.text-md-start
+		.container-fluid
+			include ../sections/_section-call-to-action
+	='\n'
+	
+	// Section CTA 2
+	section.section.section-sm.section-last.section-fluid.bg-default.text-center
+		.container-fluid
+			include ../sections/_section-call-to-action-2
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

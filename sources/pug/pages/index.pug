@@ -1,0 +1,244 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+include ../components/_ui-counters
+include ../components/_ui-box-team
+include ../components/_ui-quote
+include ../components/_ui-posts
+
+block variables
+	- var activeCategory = 'home'
+	- var pageName = 'Home'
+
+block page
+	// Page Header
+	+header-classic({})
+	
+	// Swiper
+	section.section.swiper-container.swiper-slider.swiper-slider-classic( data-loop='true' data-swiper!={
+		loop: true,
+		autoplay: {
+			delay: 5000
+		},
+		effect: 'slide',
+		simulateTouch: true,
+		direction: 'vertical',
+		nav: false
+	} )
+		.swiper-wrapper.text-center
+			.swiper-slide(data-slide-bg='images/slider-1-slide-1-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') Mobile App Development
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses.
+						a.button.button-primary.button-ujarak(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank" data-caption-animate='fadeInUp' data-caption-delay='200') Get in touch
+			.swiper-slide(data-slide-bg='images/slider-1-slide-2-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') Experienced Team
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') We are a team of qualified software developers, aimed at creating unique and powerful tools for your business & everyday life.
+						a.button.button-primary.button-ujarak(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank" data-caption-animate='fadeInUp' data-caption-delay='200') Get in touch
+			.swiper-slide(data-slide-bg='images/slider-1-slide-3-1770x742.jpg')
+				.swiper-slide-caption.section-md
+					.container
+						h1(data-caption-animate='fadeInLeft' data-caption-delay='0') Award-Winning Software
+						p.text-width-large(data-caption-animate='fadeInRight' data-caption-delay='100') The software solutions developed by our company have been numerously awarded for usability and innovative features.
+						a.button.button-primary.button-ujarak(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank" data-caption-animate='fadeInUp' data-caption-delay='200') Get in touch
+		
+		// Swiper Pagination
+		.swiper-pagination__module
+			.swiper-pagination__fraction
+				span.swiper-pagination__fraction-index 00
+				span.swiper-pagination__fraction-divider /
+				span.swiper-pagination__fraction-count 00
+			.swiper-pagination__divider
+			.swiper-pagination
+	='\n'
+	
+	// See all services
+	section.section.section-sm.section-first.bg-default.text-center
+		.container
+			.row.row-30.justify-content-center
+				.col-md-7.col-lg-5.col-xl-6.text-lg-start.wow.fadeInUp
+					+jpg('index-1-415x592')
+				.col-lg-7.col-xl-6
+					.row.row-30
+						.col-sm-6.wow.fadeInRight
+							article.box-icon-modern.box-icon-modern-custom: div
+								h3.box-icon-modern-big-title See all services
+								.box-icon-modern-decor
+								a.button.button-primary.button-ujarak(href='services.html') All services
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.1s')
+							+box-icon-modern({
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-phone-in-out',
+								title: 'CORPORATE SOLUTIONS',
+								text: 'Need specific software for your company? We are ready to develop it!'
+							})
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.2s')
+							+box-icon-modern({
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-headset',
+								title: 'CALL CENTER SOLUTIONS',
+								text: 'Our experts provide custom products of any complexity for call centers.'
+							})
+						.col-sm-6.wow.fadeInRight(data-wow-delay='.3s')
+							+box-icon-modern({
+								mod: 'box-icon-modern-2',
+								icon: 'linearicons-outbox',
+								title: 'CLOUD DEVELOPMENT',
+								text: 'We can also offer you reliable cloud development solutions.'
+							})
+	='\n'
+	
+	// Latest Projects
+	section.section.section-sm.section-fluid.bg-default.text-center
+		.container-fluid.isotope-wrap
+			h2.wow.fadeInLeft Latest Projects
+			p.quote-jean.wow.fadeInRight(data-wow-delay='.1s') In our portfolio, you can browse the latest products developed for our clients for different corporate purposes. Our qualified team of interface designers and software developers is always ready to create something unique for you.
+			include ../sections/_section-full-width-gallery
+	='\n'
+	
+	// Years of experience
+	section.section.section-sm.bg-default
+		.container
+			.row.row-30.row-xl-24.justify-content-center.align-items-center.align-items-lg-start.text-start
+				include ../sections/_section-counter-amy
+				.col-lg-6.col-xl-12.align-self-center
+					.row.row-30.justify-content-center
+						.col-sm-6.col-md-5.col-lg-6.col-xl-3.wow.fadeInLeft: a.clients-classic(href='#'): +png('clients-9-270x117')
+						.col-sm-6.col-md-5.col-lg-6.col-xl-3.wow.fadeInLeft(data-wow-delay='.1s'): a.clients-classic(href='#'): +png('clients-10-270x117')
+						.col-sm-6.col-md-5.col-lg-6.col-xl-3.wow.fadeInLeft(data-wow-delay='.2s'): a.clients-classic(href='#'): +png('clients-3-270x117')
+						.col-sm-6.col-md-5.col-lg-6.col-xl-3.wow.fadeInLeft(data-wow-delay='.3s'): a.clients-classic(href='#'): +png('clients-11-270x117')
+	='\n'
+	
+	// Years of experience
+	section.section.section-sm.section-fluid.bg-default
+		.container-fluid
+			h2 Meet The Team
+			.row.row-sm.row-30.justify-content-center
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-11-420x424',
+						name: 'Ryan Wilson',
+						status: 'Director of Production'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.1s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-12-420x424',
+						name: 'Jill Peterson',
+						status: 'UI Designer'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.2s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-13-420x424',
+						name: 'Sam Robinson',
+						status: 'Senior Developer'
+					})
+				.col-md-6.col-lg-5.col-xl-3.wow.fadeInRight(data-wow-delay='.3s')
+					+team-classic({
+						mod: 'team-classic-lg',
+						img: 'team-14-420x424',
+						name: 'Mary Lee',
+						status: 'Software Developer'
+					})
+	='\n'
+	
+	// You dream — we embody
+	section.section.section-sm.bg-default.text-md-start
+		.container
+			.row.row-50.align-items-center.justify-content-center.justify-content-xl-between
+				.col-lg-6.col-xl-5.wow.fadeInLeft
+					h2 Get More With Us
+					// Bootstrap tabs
+					#tabs-6.tabs-custom.tabs-horizontal.tabs-line.tabs-line-big.text-center.text-md-start
+						// Nav tabs
+						ul.nav.nav-tabs
+							li.item(role='presentation'): a.nav-link.nav-link-big.active(href='#tabs-6-1' data-bs-toggle='tab') 01
+							li.item(role='presentation'): a.nav-link.nav-link-big(href='#tabs-6-2' data-bs-toggle='tab') 02
+							li.item(role='presentation'): a.nav-link.nav-link-big(href='#tabs-6-3' data-bs-toggle='tab') 03
+							li.item(role='presentation'): a.nav-link.nav-link-big(href='#tabs-6-4' data-bs-toggle='tab') 04
+						
+						// Tab panes
+						.tab-content
+							div#tabs-6-1.tab-pane.fade.show.active
+								h5.fw-normal FREE APPS
+								p We regularly upload new free apps to our website, which is fully accessible to our clients and subscribers. You can also find out about free apps in our blog.
+								.group-sm.group-middle
+									a.button.button-secondary.button-pipaluk(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank") Get in touch
+									a.button.button-default-outline.button-wapasha(href='#') Download presentation
+							
+							div#tabs-6-2.tab-pane.fade
+								h5.fw-normal GET SOCIAL
+								p Every app we develop has built-in social support that allows you to stay connected to your accounts on Facebook, Instagram, Twitter and other networks.
+								.group-sm.group-middle
+									a.button.button-secondary.button-pipaluk(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank") Get in touch
+									a.button.button-default-outline.button-wapasha(href='#') Download presentation
+							
+							div#tabs-6-3.tab-pane.fade
+								h5.fw-normal CUSTOMER SERVICE
+								p Every customer of DreamSoft can get access to our friendly and qualified 24/7 support via chat or phone. Feel free to ask us any questions!
+								.group-sm.group-middle
+									a.button.button-secondary.button-pipaluk(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank") Get in touch
+									a.button.button-default-outline.button-wapasha(href='#') Download presentation
+							
+							div#tabs-6-4.tab-pane.fade
+								h5.fw-normal GREAT USABILITY
+								p All our apps are designed to have great usability in order to easily operate our applications. That is why our software has high ratings and lots of awards.
+								.group-sm.group-middle
+									a.button.button-secondary.button-pipaluk(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank") Get in touch
+									a.button.button-default-outline.button-wapasha(href='#') Download presentation
+				
+				.col-lg-6.text-center.wow.fadeInUp(data-wow-delay='.1s')
+					.row.row-30.align-items-center.justify-content-center.justify-content-xl-between
+						.col-sm-6
+							+png('index-4-261x484')
+						.col-sm-6
+							+png('index-5-261x484')
+	='\n'
+	
+	// What people Say
+	section.section.section-sm.section-bottom-70.section-fluid.bg-default
+		.container-fluid
+			h2 What people Say
+			.row.row-50.row-sm
+				.col-md-6.col-xl-4.wow.fadeInRight
+					+quote-modern({
+						mod: 'quote-modern-custom',
+						img: 'user-11-75x75',
+						author: 'Catherine Williams',
+						status: 'Regular client',
+						text: 'DreamSoft offers a high caliber of resources skilled in Microsoft Azure .NET, mobile and Quality Assurance. They became our true business partners over the past three years.'
+					})
+				.col-md-6.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
+					+quote-modern({
+						mod: 'quote-modern-custom',
+						img: 'user-12-75x75',
+						author: 'Rupert Wood',
+						status: 'Regular client',
+						text: 'DreamSoft powered us with a competent team to develop products for banking services. The team has been delivering results within budget and time, which is amazing.'
+					})
+				.col-md-6.col-xl-4.wow.fadeInRight(data-wow-delay='.2s')
+					+quote-modern({
+						mod: 'quote-modern-custom',
+						img: 'user-20-75x75',
+						author: 'Samantha Brown',
+						status: 'Regular client',
+						text: 'DreamSoft is a highly skilled and uniquely capable firm with multitudes of talent on-board. We have collaborated on a number of diverse projects that have been a great success.'
+					})
+	='\n'
+	
+	// Latest blog posts
+	section.section.section-sm.section-last.bg-default
+		.container
+			h2 Latest blog posts
+			.row.row-60.row-sm
+				include ../sections/_section-grid-blog
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

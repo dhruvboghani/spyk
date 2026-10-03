@@ -1,0 +1,76 @@
+/** @section Text styling */
+
+// Text spacing
+.text-spacing-0 { letter-spacing: 0; }
+.text-spacing-25 { letter-spacing: .025em; }
+.text-spacing-50 { letter-spacing: .05em; }
+.text-spacing-75 { letter-spacing: .075em; }
+.text-spacing-100 { letter-spacing: .1em; }
+
+.text-primary { color: $primary; }
+.text-secondary { color: $secondary; }
+.text-gray-500 { color: $gray-500; }
+
+// Text |Image
+.text-img {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	font-size: 320px;
+	line-height: 85%;
+	font-weight: 600;
+	font-family: $font-family-base;
+	color: $gray-800;
+	letter-spacing: -.06em;
+	padding-right: 10px;
+	height: 270px;
+	.ie-10 &,.ie-11 &{
+		line-height: 88%;
+	}
+	&:hover {
+		color: $gray-500;
+	}
+
+	@include media-breakpoint-up(sm) {
+		font-size: 385px;
+		height: 355px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 410px;
+		height: 355px;
+	}
+}
+
+@supports (-webkit-background-clip: text) {
+	.text-img {
+		-webkit-text-fill-color: transparent;
+		background: -webkit-linear-gradient(transparent, transparent);
+		background: -o-linear-gradient(transparent, transparent);
+		background: $gradient-2;
+		-webkit-background-clip: text;
+		> span { pointer-events: none }
+		&:hover {
+			animation-play-state: running;
+			color: red;
+		}
+
+		// Medium ≥576px
+		@include media-breakpoint-up(sm) {
+			background-position-y: 22%;
+		}
+	}
+}
+
+@keyframes imgPos {
+	0% {
+		background-position-x: 0
+	}
+
+	50% {
+		background-position-x: 100%
+	}
+
+	100% {
+		background-position-x: 0
+	}
+}

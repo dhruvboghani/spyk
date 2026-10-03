@@ -1,0 +1,33 @@
+//- Counter Amy
+.col-md-6.col-lg-5.col-xl-5.text-center
+	a(href='about-us.html').text-img
+		#particles-js
+		span.counter 10
+.col-sm-8.col-md-6.col-lg-5.col-xl-3
+	.text-width-extra-small.offset-top-lg-24.wow.fadeInUp
+		h3.title-decoration-lines-left Years of Experience
+		p.text-gray-500 DreamSoft is a team of highly experienced app designers and developers creating unique software for you.
+		a.button.button-secondary.button-pipaluk(href='https://www.templatemonster.com/website-templates/dreamsoft-software-development-company-multipage-website-template-71028.html' target="_blank") Get in touch
+.col-sm-10.col-md-8.col-lg-6.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
+	.row.justify-content-center.border-2-column.offset-top-xl-26
+		.col-9.col-sm-6
+			+counter-amy({
+				number: '2',
+				symbol: 'k',
+				title: 'apps developed'
+			})
+		.col-9.col-sm-6
+			+counter-amy({
+				number: '40',
+				title: 'Consultants'
+			})
+		.col-9.col-sm-6
+			+counter-amy({
+				number: '12',
+				title: 'Awards won'
+			})
+		.col-9.col-sm-6
+			+counter-amy({
+				number: '160',
+				title: 'Employees'
+			})

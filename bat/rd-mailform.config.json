@@ -1,0 +1,8 @@
+{
+  "useSmtp": false,
+  "host": "smtp.gmail.com",
+  "port": 465,
+  "username": "dhruv.novuscode@gmail.com",
+  "password": "icgw bxhu wpfq gypp",
+  "recipientEmail": "dhruv.novuscode@gmail.com"
+}

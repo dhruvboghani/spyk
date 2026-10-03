@@ -1,0 +1,154 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Hover effects'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Section hover #1
+	section.section.section-sm.section-first.bg-default
+		.container
+			h3 #1
+			.row.row-30(data-lightgallery='group')
+				.col-md-6.col-lg-5.col-xl-4
+					+thumbnail-classic({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '1',
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+thumbnail-classic({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '2'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+thumbnail-classic({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '3'
+					})
+	='\n'
+	
+	// Section hover #2
+	section.section.section-sm.bg-default
+		.container
+			h3 #2
+			.row.row-30(data-lightgallery='group')
+				.col-md-6.col-lg-4
+					+thumbnail-modern({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '1',
+						title: 'Xtra Graph Builder',
+						subtitle: '2013, QA & Testing'
+					})
+				.col-md-6.col-lg-4
+					+thumbnail-modern({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '4',
+						title: 'WeatherCast',
+						subtitle: '2012, UI & UX Design'
+					})
+				.col-md-6.col-lg-4
+					+thumbnail-modern({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '6',
+						title: 'RKX Assistant',
+						subtitle: '2011, App Optimization'
+					})
+	='\n'
+	
+	// Section hover #3
+	section.section.section-sm.bg-default
+		.container
+			h3 #3
+			.row.row-30(data-lightgallery='group')
+				.col-sm-6.col-lg-4
+					+thumbnail-creative({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '6',
+						title: 'Social apps',
+						time: {
+							datetime: '2014-05-04',
+							dateText: 'May 04, 2019'
+						}
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-creative({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '3',
+						title: 'Android Apps',
+						time: {
+							datetime: '2015-12-05',
+							dateText: 'December 05, 2015'
+						}
+					})
+				.col-sm-6.col-lg-4
+					+thumbnail-creative({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '2',
+						title: 'iOS Apps',
+						time: {
+							datetime: '2019-06-24',
+							dateText: 'june 24, 2014'
+						}
+					})
+	='\n'
+	
+	// Section hover #4
+	section.section.section-sm.section-last.bg-default
+		.container
+			h3 #4
+			.row.row-30(data-lightgallery='group')
+				.col-md-6.col-lg-4
+					+thumbnail-mary({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '4',
+						numberProject: '1'
+					})
+				.col-md-6.col-lg-4
+					+thumbnail-mary({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '6',
+						numberProject: '2'
+					})
+				.col-md-6.col-lg-4
+					+thumbnail-mary({
+						mod: 'thumbnail-sm',
+						nameImg: 'grid-gallery',
+						sizeImg: '370x303',
+						numberImg: '1',
+						numberProject: '3'
+					})
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

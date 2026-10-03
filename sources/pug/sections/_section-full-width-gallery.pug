@@ -1,0 +1,84 @@
+.isotope-filters.isotope-filters-horizontal
+  //- Isotope Filters
+  button.isotope-filters-toggle.button.button-md.button-icon.button-icon-right.button-default-outline.button-wapasha(data-custom-toggle='#isotope-3', data-custom-toggle-hide-on-blur='true'  data-custom-toggle-disable-on-blur='true')
+    span.icon.fa.fa-caret-down
+    | Filter
+  ul#isotope-3.isotope-filters-list
+    li: a.active(href='#', data-isotope-filter='*', data-isotope-group='gallery') All
+    li: a(href='#', data-isotope-filter='Type 1', data-isotope-group='gallery') mobile Apps
+    li: a(href='#', data-isotope-filter='Type 2', data-isotope-group='gallery') Custom Software
+    li: a(href='#', data-isotope-filter='Type 3', data-isotope-group='gallery') QA & Testing
+    li: a(href='#', data-isotope-filter='Type 4', data-isotope-group='gallery') UX and Design
+.row.row-30.isotope(data-isotope-layout='fitRows', data-isotope-group='gallery', data-lightgallery='group')
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInLeft(data-filter='Type 3')
+    +thumbnail-classic({
+      title: 'FinStep',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '1',
+      nameImgOriginal: 'grid-gallery-1'
+        })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInLeft(data-filter='Type 1' data-wow-delay='.1s')
+    +thumbnail-classic({
+      title: 'Mobile Finance',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '2',
+      nameImgOriginal: 'grid-gallery-2'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInLeft(data-filter='Type 2' data-wow-delay='.2s')
+    +thumbnail-classic({
+      title: 'Q-Manage',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '3',
+      nameImgOriginal: 'grid-gallery-3'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInLeft(data-filter='Type 3' data-wow-delay='.3s')
+    +thumbnail-classic({
+      title: 'WeatherCast',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '4',
+      nameImgOriginal: 'grid-gallery-4'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInRight(data-filter='Type 4')
+    +thumbnail-classic({
+      title: 'Home Calendar',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '5',
+      nameImgOriginal: 'grid-gallery-5'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInRight(data-filter='Type 1' data-wow-delay='.1s')
+    +thumbnail-classic({
+      title: 'MPlanner',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '6',
+      nameImgOriginal: 'grid-gallery-6'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInRight(data-filter='Type 2' data-wow-delay='.2s')
+    +thumbnail-classic({
+      title: 'Alice Messenger',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '7',
+      nameImgOriginal: 'grid-gallery-7'
+    })
+  .col-sm-6.col-lg-4.col-xxl-3.isotope-item.wow.fadeInRight(data-filter='Type 3' data-wow-delay='.3s')
+    +thumbnail-classic({
+      title: 'WiseMoney',
+      mod: 'thumbnail-md',
+      nameImg: 'fullwidth-gallery',
+      sizeImg: '420x350',
+      numberImg: '8',
+      nameImgOriginal: 'grid-gallery-8'
+    })

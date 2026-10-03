@@ -1,0 +1,56 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-posts
+include ../components/_ui-pagination
+
+block variables
+	- var activeCategory = 'blog'
+	- var pageName = 'Grid blog'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Grid blog
+	section.section.section-xl.bg-default.text-md-start
+		.container
+			.row.row-60
+				include ../sections/_section-grid-blog
+				
+				.col-sm-6.col-lg-4
+					+post-modern({
+						img: 'post-13-370x307',
+						time: {datetime: '2023-07-04', dateNumber: '04', dateMonth: '09'},
+						title: 'Startup Software Development',
+						text: 'Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh.'
+					})
+				
+				.col-sm-6.col-lg-4
+					+post-modern({
+						img: 'post-14-370x307',
+						time: {datetime: '2023-07-17', dateNumber: '17', dateMonth: '08'},
+						title: 'Hybrid Software Solutions',
+						text: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+					})
+				
+				.col-sm-6.col-lg-4
+					+post-modern({
+						img: 'post-15-370x307',
+						time: {datetime: '2023-07-22', dateNumber: '22', dateMonth: '05'},
+						title: 'Creating Better Software',
+						text: 'Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat.'
+					})
+			
+			.pagination-wrap
+				+pagination-bootstrap(null, 1, 4)
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

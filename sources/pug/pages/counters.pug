@@ -1,0 +1,117 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-counters
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Counters'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Counter Modern
+	section.section.section-xl.bg-default
+		.container
+			.row.row-30.justify-content-center
+				.col-8.col-sm-4
+					+counter-modern({
+						number: '12',
+						title: 'Awards<br>won'
+					})
+				.col-8.col-sm-4
+					+counter-modern({
+						number: '194',
+						title: 'Apps<br>developed'
+					})
+				.col-8.col-sm-4
+					+counter-modern({
+						number: '25',
+						title: 'Team<br>members'
+					})
+	='\n'
+	
+	include ../sections/_section-counter-classic
+	
+	// Counter Creative
+	section.section.section-xl.bg-default
+		.container
+			.row.row-50.justify-content-center.border-classic.border-classic-big
+				.col-sm-6.col-md-5.col-lg-3
+					+counter-creative({
+						icon: 'fl-bigmug-line-trophy55',
+						number: '12',
+						title: 'Awards won'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+counter-creative({
+						icon: 'fl-bigmug-line-user144',
+						number: '2',
+						symbol: 'k',
+						title: 'Satisfied customers'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+counter-creative({
+						icon: 'fl-bigmug-line-up104',
+						number: '24',
+						title: 'company offices'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+counter-creative({
+						icon: 'fl-bigmug-line-user143',
+						number: '13',
+						title: 'Team members'
+					})
+	='\n'
+	
+	// Counter Abby
+	section.section.section-fluid.bg-default
+		+parallax({
+			img: 'bg-counter-3',
+			innerClass: 'section-xl context-dark'
+		})
+			.container
+				.row.row-30.justify-content-center
+					.col-sm-6.col-lg-3
+						+counter-classic({
+							mod: 'counter-abby',
+							number: '12',
+							title: 'Awards won'
+						})
+					.col-sm-6.col-lg-3
+						+counter-classic({
+							mod: 'counter-abby',
+							number: '194',
+							title: 'Apps developed'
+						})
+					.col-sm-6.col-lg-3
+						+counter-classic({
+							mod: 'counter-abby',
+							number: '5',
+							symbol: 'k',
+							title: 'Satisfied customers'
+						})
+					.col-sm-6.col-lg-3
+						+counter-classic({
+							mod: 'counter-abby',
+							number: '25',
+							title: 'Team members'
+						})
+	='\n'
+	
+	// Counter Amy
+	section.section.section-xl.bg-default
+		.container
+			.row.row-50.justify-content-center.align-items-center.align-items-lg-start.text-start
+				include ../sections/_section-counter-amy
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

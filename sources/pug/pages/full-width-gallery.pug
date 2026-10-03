@@ -1,0 +1,25 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'gallery'
+	- var pageName = 'Full-width gallery'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Grid Gallery
+	section.section.section-xl.section-fluid.bg-default.text-center
+		.container-fluid.isotope-wrap
+			include ../sections/_section-full-width-gallery
+			.button-wrap: button.button.button-md.button-default-outline.button-wapasha Load More
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

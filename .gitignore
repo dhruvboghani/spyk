@@ -1,0 +1,7 @@
+# Oversized / binary source assets (GitHub 100MB limit)
+sources/psd/*.psd
+site.zip
+
+# OS junk
+.DS_Store
+**/.DS_Store

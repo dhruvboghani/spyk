@@ -1,0 +1,105 @@
+-
+  var
+    html_class = "wide wow-animation",
+    fonts = "//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500",
+    subscribeFormCounter = 0,
+    logo = {
+      default: 'logo-default-191x52',
+      inverse: 'logo-inverse-191x52',
+      defaultDecor: 'logo-default-decor-190x43',
+      defaultFurniture: 'logo-default-furniture-190x43',
+      defaultFlooring: 'logo-default-flooring-190x43',
+      defaultInterior: 'logo-default-interior-190x43',
+      defaultLandscape: 'logo-default-landscape-190x43',
+      defaultWindow: 'logo-default-window-190x43',
+      name: 'DreamSoft'
+    },
+    links = {
+      post: 'blog-post.html',
+      getTemplate:'#get-template'
+    },
+    colors = {
+      primary: '#756aee'
+    },
+    menu = [
+      {
+        title: 'Home',
+        category: 'home',
+        link: 'index.html'
+      },
+      {
+        title: 'About Us',
+        category: 'about'
+      },
+      {
+        title: 'Gallery',
+        category: 'gallery',
+        link: 'grid-gallery.html',
+        dropdown: [
+          { title: 'Full width Gallery' },
+          { title: 'Grid Gallery' },
+          { title: 'Full Width Masonry Gallery' },
+          { title: 'Masonry Gallery' }
+        ]
+      },
+      {
+        title: 'Pricing',
+        category: 'pricing',
+        link: 'pricing.html'
+      },
+      {
+        title: 'Blog',
+        category: 'blog',
+        link: 'classic-blog.html',
+        dropdown: [
+          {	title: 'Classic Blog' },
+          {	title: 'Grid Blog' },
+          {	title: 'Grid Blog 2' },
+          {	title: 'Grid Blog 3' },
+          {	title: 'Blog Post' }
+        ]
+      },
+      {
+        title: 'Contact Us',
+        category: 'contacts'
+      },
+      {
+        title: 'Pages',
+        category: 'pages',
+        link: '#',
+        megamenu: [
+          {
+            title: 'Elements',
+            list: [
+              { title: 'Typography' },
+              { title: 'Icons with Text' },
+              { title: 'Buttons' },
+              { title: 'Counters' },
+              { title: 'Forms' },
+              { title: 'Calls to Action' },
+              { title: 'Progress Bars' },
+              { title: 'Tabs and Accordions' },
+              { title: 'Hover Effects' },
+              { title: 'Grid System' }
+            ]
+          },
+          {
+            title: 'Additional pages',
+            list: [
+              { title: 'Services' },
+              { title: 'Services 2' },
+              { title: 'Single Service' },
+              { title: 'Our Team' },
+              { title: 'Testimonials' },
+              { title: '404 Page' },
+              { title: '503 Page' },
+              { title: 'Pricing' },
+              { title: 'Coming Soon' },
+              { title: 'Contact Us 2' },
+              { title: 'FAQ' },
+              { title: 'Search results' }
+            ]
+          }
+        ]
+      }
+    ];

@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-posts
+include ../components/_ui-pagination
+include ../components/_ui-quote
+include ../components/_ui-box-comment
+include ../components/_form-comments
+
+block variables
+	- var activeCategory = 'blog'
+	- var pageName = 'Blog post'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Blog Post
+	section.section.section-xl.bg-default.text-start
+		.container: .row.row-70
+			.col-lg-8
+				.blog-post
+					+post-classic({
+						blogPost: true,
+						title: 'Benefits of ASync/Await in Programming',
+						badge: {mod: 'badge-secondary', text: 'Development'},
+						time: {datetime: '2023-11-30', dateText: 'Nov 30, 2023'},
+						text: 'Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit tortor eget felis porttitor volutpat.',
+						img: 'post-1-770x430'
+					})
+					+quote-classic({
+						mod: 'quote-classic-big',
+						text: 'Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.'
+					})
+					
+					p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.
+					.blog-post-bottom-panel.group-md.group-justify
+						.blog-post-tags
+							a(href='#') Development
+							a(href='#') Programming
+							a(href='#') news
+						div: .group-md.group-middle
+							span.social-title Share
+							div: +widget-list([], '', 'list-inline-sm social-list')
+				
+				.blog-post-comments
+					h5.text-spacing-100.fw-normal 3 Comments
+					+box-comment({
+						postComment: true,
+						img: 'user-1-119x119',
+						author: 'John Doe',
+						text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.',
+						datetime: '2023-11-30',
+						time: 'Nov 30, 2023'
+					})
+						+box-comment({
+							postComment: true,
+							img: 'user-2-119x119',
+							author: 'Jessica Brown',
+							text: 'Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.',
+							datetime: '2023-11-30',
+							time: 'Nov 30, 2023'
+						})
+					+box-comment({
+						postComment: true,
+						img: 'user-3-119x119',
+						author: 'Nick Stevens',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.',
+						datetime: '2023-11-30',
+						time: 'Nov 30, 2023'
+					})
+				
+				.blog-post-comments
+					+form-comments({customUnique: '5'})
+			
+			.col-lg-4
+				include ../sections/_post-sidebar
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

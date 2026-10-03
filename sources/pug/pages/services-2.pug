@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-services
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Services 2'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: ['Services #2'],
+		bgImage: 'bg-elements'
+	})
+	
+	// Section-services
+	section.section.section-xl.bg-default
+		.container
+			.row.row-50.justify-content-center.box-ordered
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-1-370x297',
+						title: 'Corporate solutions'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-2-370x297',
+						title: 'Call Center Solutions'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-3-370x297',
+						title: 'Cloud Development'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-4-370x297',
+						title: 'iOS/MacOS Apps'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-5-370x297',
+						title: 'Android Applications'
+					})
+				.col-md-6.col-lg-5.col-xl-4
+					+services-classic({
+						img: 'services-6-370x297',
+						title: 'UX and Design'
+					})
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

@@ -1,0 +1,105 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-box-icon
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Icons with Text'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'bg-elements'
+	})
+	
+	// Icons #1
+	section.section.section-sm.section-first.bg-default
+		.container
+			h3 #1
+			.row.row-40.box-ordered
+				.col-sm-6.col-lg-3
+					+box-icon-creative({
+						icon: 'fl-bigmug-line-favourites5',
+						title: 'FREE apps',
+						text: 'Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. '
+					})
+				.col-sm-6.col-lg-3
+					+box-icon-creative({
+						icon: 'fl-bigmug-line-hot67',
+						title: 'get Social',
+						text: 'Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.'
+					})
+				.col-sm-6.col-lg-3
+					+box-icon-creative({
+						icon: 'fl-bigmug-line-user143',
+						title: 'customer service',
+						text: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.'
+					})
+				.col-sm-6.col-lg-3
+					+box-icon-creative({
+						icon: 'fl-bigmug-line-chat55',
+						title: 'Full project support',
+						text: 'Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.'
+					})
+	='\n'
+	
+	// Icons #2
+	section.section.section-sm.bg-default
+		.container
+			h3 #2
+			.row.row-40
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'fl-bigmug-line-window50',
+						title: 'Windows Apps',
+						text: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'fl-bigmug-line-equalizer26',
+						title: 'UX & UI',
+						text: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.'
+					})
+				.col-md-6.col-lg-4
+					+box-icon-modern({
+						icon: 'fl-bigmug-line-chat55',
+						title: 'Consultations',
+						text: 'Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.'
+					})
+	='\n'
+	
+	// Icons #3
+	section.section.section-sm.section-last.bg-default
+		.container
+			h3 #3
+			.row.row-40
+				.col-sm-6.col-lg-4
+					+box-icon-classic({
+						align: 'flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left',
+						icon: 'fl-bigmug-line-graphical8',
+						title: 'QA Testing',
+						text: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. '
+					})
+				.col-sm-6.col-lg-4
+					+box-icon-classic({
+						align: 'flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left',
+						icon: 'fl-bigmug-line-giftbox54',
+						title: 'Nice bonuses for clients',
+						text: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.'
+					})
+				.col-sm-6.col-lg-4
+					+box-icon-classic({
+						align: 'flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left',
+						icon: 'fl-bigmug-line-hot67',
+						title: '-20% for the 1st purchase',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.'
+					})
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

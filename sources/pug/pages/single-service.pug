@@ -1,0 +1,165 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-quote
+include ../components/_ui-box-icon
+
+block variables
+	- var activeCategory = 'pages'
+	- var pageName = 'Single service'
+
+block page 
+	// Page Header
+	+header-classic({})
+	
+	+breadcrumbs({
+		category: activeCategory,
+		path: ['Corporate Solutions'],
+		bgImage: 'bg-elements'
+	})
+	
+	// Section single service
+	section.section.section-sm.section-first.bg-default
+		.container
+			.row.row-70
+				.col-lg-8
+					.single-service
+						h3 Corporate solutions
+						p.text-spacing-100 Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+						+quote-classic({
+							text: 'Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta.'
+						})
+						p.text-spacing-100 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+						.row.row-40.align-items-xl-center
+							.col-md-6.col-xl-5
+								h5.text-spacing-100 key features
+								ul.list-sm.list-marked.list-marked-sm.list-marked-secondary.text-spacing-100
+									li High usability
+									li Improved performance
+									li Customizable interface
+									li Crossplatform support
+								a.button.button-primary.button-pipaluk(href='#') Get a free quote
+							
+							.col-md-6.col-xl-7.text-lg-end: +jpg('single-service-1-418x289')
+				
+				.col-lg-4
+					// Post Sidebar
+					.post-sidebar.post-sidebar-inset
+						.row.row-lg.row-60
+							.col-sm-6.col-lg-12
+								.post-sidebar-item
+									h5 Our services
+									.post-sidebar-item-inset.inset-right-20
+										ul.list.list-categories
+											li: a(href='#').active Corporate Apps
+											li: a(href='#') Call Center Soft
+											li: a(href='#') Cloud Dev
+											li: a(href='#') iOS/MacOS Apps
+											li: a(href='#') Android Apps
+											li: a(href='#') UX and Design
+							.col-sm-6.col-lg-12
+								.post-sidebar-item
+									h5 Get in touch
+									.post-sidebar-item-inset
+										ul.list-contacts
+											li: .unit.unit-spacing-xs
+												.unit-left: span.icon.fa.fa-phone
+												.unit-body: a.link-phone(href='tel:#') +1 323-913-4688
+											li: .unit.unit-spacing-xs
+												.unit-left: span.icon.fa.fa-envelope
+												.unit-body: a.link-email(href='mailto:#') info@demolink.org
+											li: .unit.unit-spacing-xs
+												.unit-left: span.icon.fa.fa-location-arrow
+												.unit-body: a.link-location(href='#') 4730 Crystal Springs Dr, Los Angeles, CA 90027
+	='\n'
+	
+	// How we work
+	section.section.section-sm.bg-default
+		.container
+			h3 How we work
+			.row.row-30.row-sm.justify-content-center.box-ordered
+				.col-sm-6.col-md-5.col-lg-3
+					+box-icon-leah({
+						icon: 'fl-bigmug-line-pin42',
+						title: 'Free consultation',
+						text: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla. '
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+box-icon-leah({
+						icon: 'fl-bigmug-line-chat55',
+						title: 'Concept creation',
+						text: 'Proin eget tortor risus. Vivamus magna justo, lacinia eget, convallis at tellus.'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+box-icon-leah({
+						icon: 'fl-bigmug-line-checkmark15',
+						title: 'Development',
+						text: 'Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.'
+					})
+				.col-sm-6.col-md-5.col-lg-3
+					+box-icon-leah({
+						icon: 'fl-bigmug-line-copy23',
+						title: 'Quality Assurance',
+						text: 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
+					})
+	='\n'
+	
+	// Latest Projects
+	section.section.section-sm.section-fluid.bg-default
+		.container
+			h3 Latest Projects
+		// Owl Carousel
+		.owl-carousel.owl-classic(data-items='1', data-md-items='2', data-lg-items='3', data-xl-items='4', data-margin='30', data-autoplay='true', data-nav='true', data-dots='true')
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '1',
+				nameImgOriginal: 'grid-gallery-1'
+			})
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '2',
+				nameImgOriginal: 'grid-gallery-2'
+			})
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '3',
+				nameImgOriginal: 'grid-gallery-3'
+			})
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '4',
+				nameImgOriginal: 'grid-gallery-6'
+			})
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '5',
+				nameImgOriginal: 'grid-gallery-9'
+			})
+			+thumbnail-mary({
+				mod: 'thumbnail-md',
+				nameImg: 'project',
+				sizeImg: '420x308',
+				numberImg: '6',
+				nameImgOriginal: 'grid-gallery-4'
+			})
+	='\n'
+	
+	// Pricing list
+	section.section.section-sm.section-last.bg-default
+		.container
+			h3 Pricing list
+			include ../sections/_pricing-list
+	='\n'
+	
+	// Page Footer
+	+footer-classic({})

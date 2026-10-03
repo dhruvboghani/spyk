@@ -1,0 +1,9 @@
+//- Services
+
+mixin services-classic(obj)
+  // Services Classic
+  article.services-classic(class=obj.mod)
+    a.services-classic-figure(href='single-service.html'): +jpg(obj.img)
+    .services-classic-caption
+      h4.services-classic-counter.box-ordered-item
+      h5.services-classic-title: a(href='single-service.html')=obj.title
